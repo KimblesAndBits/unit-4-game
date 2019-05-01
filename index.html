@@ -15,9 +15,10 @@
     <body>
         <div class="content-wrapper">
             <div class="row"><p>Pick a character!</p></div>
-            <div class="row player-character">
-                <div class="col-md-3 player-character-1" id="Luke">
-                    <div class="card" style="width: 18rem;">
+            <div class="row">
+                <!-- first character, always displays a character, changes to who you chose -->
+                <div class="col-sm-3 player-character-1" id="Luke">
+                    <div class="card" style="width: 100%;">
                         <img src="assets/images/luke.jpeg" class="card-img-top" alt="Luke Skywalker">
                         <div class="card-body">
                             <h5 class="card-title">Luke Skywalker</h5>
@@ -25,28 +26,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 player-character-2" id="Han">
-                    <div class="card" style="width: 18rem;">
+                <!-- second character, changes to empty when you chose one -->
+                <div class="col-sm-3 player-character-2" id="Han">
+                    <div class="card" style="width: 100%;">
                         <img src="assets/images/han.jpeg" class="card-img-top" alt="Luke Skywalker">
                         <div class="card-body">
-                            <h5 class="card-title">Luke Skywalker</h5>
+                            <h5 class="card-title">Han Solo</h5>
                             <p class="card-text han-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 player-character-3" id="Vader">
-                    <div class="card" style="width: 18rem;">
+                <!-- third character, changes to empty when you chose one -->
+                <div class="col-sm-3 player-character-3" id="Vader">
+                    <div class="card" style="width: 100%;">
                         <img src="assets/images/vader.jpeg" class="card-img-top" alt="Luke Skywalker">
                         <div class="card-body">
-                            <h5 class="card-title">Luke Skywalker</h5>
+                            <h5 class="card-title">Darth Vader</h5>
                             <p class="card-text vader-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
-                    </div>                </div>
-                <div class="col-md-3 player-character-4" id="Boba-Fett">
-                    <div class="card" style="width: 18rem;">
+                    </div>                
+                </div>
+                <!-- fourth character, chages to empty when you chose one -->
+                <div class="col-sm-3 player-character-4" id="Boba-Fett">
+                    <div class="card" style="width: 100%;">
                         <img src="assets/images/fett.jpeg" class="card-img-top" alt="Luke Skywalker">
                         <div class="card-body">
-                            <h5 class="card-title">Luke Skywalker</h5>
+                            <h5 class="card-title">Boba Fett</h5>
                             <p class="card-text fett-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>                
@@ -54,16 +59,16 @@
             </div>
             <div class="row"><p>Pick an opponent</p></div>
             <div class="row opponent-picker">
-                <div class="col-md-3">
+                <div class="col-sm-3 opponent-1">
                     Unused Hero<!--changes to empty after last opponent is picked-->
                 </div>
-                <div class="col-md-3">
+                <div class="col-sm-3 opponent-2">
                     Unused Hero<!--changes to empty after second opponent is picked-->
                 </div>
-                <div class="col-md-3">
+                <div class="col-sm-3 opponent-3">
                     Unused Hero<!--changes to empty after first opponent is picked-->
                 </div>
-                <div class="col-md-3">
+                <div class="col-sm-3">
                     <!-- empty -->
                 </div>
             </div>
@@ -71,16 +76,16 @@
                 <button>Attack</button>
             </div>
             <div class="row opponent-character">
-                <div class="col-md-3 chosen-opponent">
+                <div class="col-sm-3 chosen-opponent">
                     Opponent card<!--changes to current opponent-->
                 </div>
-                <div class="col-md-3">
+                <div class="col-sm-3">
                     <!-- empty -->
                 </div>
-                <div class="col-md-3">
+                <div class="col-sm-3">
                     <!-- empty -->
                 </div>
-                <div class="col-md-3">
+                <div class="col-sm-3">
                     <!-- empty -->
                 </div>
             </div>

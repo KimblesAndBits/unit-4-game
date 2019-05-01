@@ -2,3 +2,12 @@ body{
     background-image: url(../images/background.jpeg);
     background-size: 100%;
 }
+
+.content-wrapper {
+    width: 95%;
+    margin: auto;
+}
+
+.card {
+    width: 100%;
+}
