@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Star Wars RPG</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
+        <link type="text/javascript" type="text/css" href="assets/css/reset.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    </head>
+    <header>
+         <h1>Star Wars RPG</h1>
+    </header>
+    <body>
+        <div class="content-wrapper">
+            <div class="row"><p>Pick a character!</p></div>
+            <div class="row player-character">
+                <div class="col-md-3 player-character-1" id="Luke">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/images/luke.jpeg" class="card-img-top" alt="Luke Skywalker">
+                        <div class="card-body">
+                            <h5 class="card-title">Luke Skywalker</h5>
+                            <p class="card-text luke-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 player-character-2" id="Han">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/images/han.jpeg" class="card-img-top" alt="Luke Skywalker">
+                        <div class="card-body">
+                            <h5 class="card-title">Luke Skywalker</h5>
+                            <p class="card-text han-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 player-character-3" id="Vader">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/images/vader.jpeg" class="card-img-top" alt="Luke Skywalker">
+                        <div class="card-body">
+                            <h5 class="card-title">Luke Skywalker</h5>
+                            <p class="card-text vader-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>                </div>
+                <div class="col-md-3 player-character-4" id="Boba-Fett">
+                    <div class="card" style="width: 18rem;">
+                        <img src="assets/images/fett.jpeg" class="card-img-top" alt="Luke Skywalker">
+                        <div class="card-body">
+                            <h5 class="card-title">Luke Skywalker</h5>
+                            <p class="card-text fett-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+            <div class="row"><p>Pick an opponent</p></div>
+            <div class="row opponent-picker">
+                <div class="col-md-3">
+                    Unused Hero<!--changes to empty after last opponent is picked-->
+                </div>
+                <div class="col-md-3">
+                    Unused Hero<!--changes to empty after second opponent is picked-->
+                </div>
+                <div class="col-md-3">
+                    Unused Hero<!--changes to empty after first opponent is picked-->
+                </div>
+                <div class="col-md-3">
+                    <!-- empty -->
+                </div>
+            </div>
+            <div class="row">
+                <button>Attack</button>
+            </div>
+            <div class="row opponent-character">
+                <div class="col-md-3 chosen-opponent">
+                    Opponent card<!--changes to current opponent-->
+                </div>
+                <div class="col-md-3">
+                    <!-- empty -->
+                </div>
+                <div class="col-md-3">
+                    <!-- empty -->
+                </div>
+                <div class="col-md-3">
+                    <!-- empty -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
