@@ -6,6 +6,7 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script type="text/javascript" src="assets/javascript/game.js"></script>
         <link type="text/javascript" type="text/css" href="assets/css/reset.css">
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
@@ -14,7 +15,7 @@
     </header>
     <body>
         <div class="content-wrapper">
-            <div class="row"><p id="player-head">Pick a character!</p></div>
+            <div class="row thin-row"><p id="player-head">Pick a character!</p></div>
             <div class="row">
                 <!-- first character, always displays a character, changes to who you chose -->
                 <div class="col-sm-3" id="PC1">
@@ -57,7 +58,7 @@
                     </div>                
                 </div>
             </div>
-            <div class="row"><p id="opponent-head">Pick an opponent!</p></div>
+            <div class="row thin-row"><p id="picked-opponent-head"></p></div>
             <div class="row opponent-picker">
                 <div class="col-sm-3 opponent-1 opponent-choice">
                     <!--Unused Hero changes to empty after last opponent is picked-->
@@ -72,9 +73,16 @@
                     <!-- empty -->
                 </div>
             </div>
-            <div class="row">
-                <button>Attack</button>
+            <div class="row thin-row">
+                <div class="col-sm-6">
+                    <button id="attack-button"><span id="Attack">Attack<span></span></button>
+                </div>
+                <div class="col-sm-6" id="damage-box">
+                    <div id="player-damage"></div>
+                    <div id="opponent-damage"></div>
+                </div>
             </div>
+            <div class="row"><p id="opponent-head"></p></div>
             <div class="row opponent-character">
                 <div class="col-sm-3 chosen-opponent">
                     <!--Opponent card changes to current opponent-->
