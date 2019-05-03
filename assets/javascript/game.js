@@ -1,8 +1,8 @@
 var characterChoices = [
-["Luke", 175, 4, 25, '<div class="card" alt="Luke" style="width: 100%;"><img src="assets/images/luke.jpeg" class="card-img-top" alt="Luke Skywalker"><div class="card-body"><h5 class="card-title">Luke Skywalker</h5><p class="card-text" id="Luke-text>175 HP</p></div></div>'],
-["Han", 100, 8, 12, '<div class="card" alt="Han" style="width: 100%;"><img src="assets/images/han.jpeg" class="card-img-top" alt="Han Solo"><div class="card-body"><h5 class="card-title">Han Solo</h5><p class="card-text" id="Han-text>100 HP</p></div></div>'],
-["Vader", 140, 6, 5, '<div class="card" alt="Vader" style="width: 100%;"><img src="assets/images/vader.jpeg" class="card-img-top" alt="Darth Vader"><div class="card-body"><h5 class="card-title">Darth Vader</h5><p class="card-text" id="Vader-text>140 HP</p></div></div>'],
-["Boba-Fett", 125, 7, 16, '<div class="card" alt="Boba-Fett" style="width: 100%;"><img src="assets/images/fett.jpeg" class="card-img-top" alt="Boba Fett"><div class="card-body"><h5 class="card-title">Boba Fett</h5><p class="card-text" id="Boba-Fett-text>125 HP</p></div></div>']];
+["Luke", 175, 4, 25, '<div class="card" alt="Luke" style="width: 100%;"><img src="assets/images/luke.jpeg" class="card-img-top" alt="Luke Skywalker"><div class="card-body"><h5 class="card-title">Luke Skywalker</h5><p class="card-text" id="Luke-text">175 HP</p></div></div>'],
+["Han", 100, 8, 12, '<div class="card" alt="Han" style="width: 100%;"><img src="assets/images/han.jpeg" class="card-img-top" alt="Han Solo"><div class="card-body"><h5 class="card-title">Han Solo</h5><p class="card-text" id="Han-text">100 HP</p></div></div>'],
+["Vader", 140, 6, 5, '<div class="card" alt="Vader" style="width: 100%;"><img src="assets/images/vader.jpeg" class="card-img-top" alt="Darth Vader"><div class="card-body"><h5 class="card-title">Darth Vader</h5><p class="card-text" id="Vader-text">140 HP</p></div></div>'],
+["Boba-Fett", 125, 7, 16, '<div class="card" alt="Boba-Fett" style="width: 100%;"><img src="assets/images/fett.jpeg" class="card-img-top" alt="Boba Fett"><div class="card-body"><h5 class="card-title">Boba Fett</h5><p class="card-text" id="Boba-Fett-text">125 HP</p></div></div>']];
 
 var character = {
     name: "?",
@@ -10,7 +10,6 @@ var character = {
     attackStat: 0,
     counterAttackStat: 0,
     characterCard: "?",
-    defeated: false,
     pickMe: function(arr) {
         this.name = arr[0];
         this.hp = arr[1];
@@ -24,7 +23,6 @@ var character = {
         this.attackStat = 0;
         this.counterAttackStat = 0;
         this.characterCard = "?";
-        this.defeated = false;
     },
 }
 //make two variables that equal character objects
@@ -53,12 +51,13 @@ function playerPickRewrite() {
 
 $(document).ready(function() {
     //pick a player character
-    $(".card").on("click", function() {
+    $(".player-character").on("click", function() {
         //use the attribute "alt" of the card we clicked to find out which character we picked
         //this corresponds with the name of the characters in the array of possible characters
         var chosenName = $(this).attr("alt");
         //if the name in the alt attribute matches the first part of the index of the array, that is the player's choice
         //and use the pickMe method to assign the info to the playerCharacter object
+        //then refresh the page
         if(playerCharacter.name === "?") {
             for(var characterIdx = 0; characterIdx < characterChoices.length; characterIdx++){
                 if(chosenName === characterChoices[characterIdx][0]) {
@@ -68,5 +67,7 @@ $(document).ready(function() {
             }
         }
     });
+
+    $(".")
 
 });
