@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     var characterChoices = [
         ["Luke", 175, 4, 25, '<div class="card" id="player-character alt="Luke" style="width: 100%;"><img src="assets/images/luke.jpeg" class="card-img-top" alt="Luke Skywalker"><div class="card-body"><h5 class="card-title">Luke Skywalker</h5><p class="card-text" id="Luke-text">175 HP</p></div></div>'],
-        ["Han", 100, 8, 12, '<div class="card player-character" alt="Han" style="width: 100%;"><img src="assets/images/han.jpeg" class="card-img-top" alt="Han Solo"><div class="card-body"><h5 class="card-title">Han Solo</h5><p class="card-text" id="Han-text">100 HP</p></div></div>'],
+        ["Han", 100, 8, 8, '<div class="card player-character" alt="Han" style="width: 100%;"><img src="assets/images/han.jpeg" class="card-img-top" alt="Han Solo"><div class="card-body"><h5 class="card-title">Han Solo</h5><p class="card-text" id="Han-text">100 HP</p></div></div>'],
         ["Vader", 140, 6, 5, '<div class="card player-character" alt="Vader" style="width: 100%;"><img src="assets/images/vader.jpeg" class="card-img-top" alt="Darth Vader"><div class="card-body"><h5 class="card-title">Darth Vader</h5><p class="card-text" id="Vader-text">140 HP</p></div></div>'],
         ["Boba-Fett", 125, 7, 18, '<div class="card player-character" alt="Boba-Fett" style="width: 100%;"><img src="assets/images/fett.jpeg" class="card-img-top" alt="Boba Fett"><div class="card-body"><h5 class="card-title">Boba Fett</h5><p class="card-text" id="Boba-Fett-text">125 HP</p></div></div>']];
     
