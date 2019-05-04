@@ -21,6 +21,12 @@ p {
     color: white;
 }
 
+button {
+    border: none;
+    background-color: slategray;
+    color: whitesmoke;
+}
+
 #player-damage {
     color: darkblue;;
 }
