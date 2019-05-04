@@ -105,15 +105,6 @@ $(document).ready(function() {
             $("#Attack").text("Reset");
         }
     };
-    
-    function resetGame() {
-        usedNames = [];
-        opponentsFought = 0;
-        playerCharacter.resetCharacter();
-        opponentCharacter.resetCharacter();
-        location.reload();
-    }
-
 
     //pick a player character
     $(".player-character").on("click", function() {
@@ -155,7 +146,7 @@ $(document).ready(function() {
             attack();
         }
         else if(playerCharacter.hp <= 0 && playerCharacter.name !== "") {
-            resetGame();
+            location.reload();
         };
     });
 
