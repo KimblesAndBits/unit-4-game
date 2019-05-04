@@ -30,7 +30,7 @@ $(document).ready(function() {
             this.characterCard = "";
         },
     };
-    //make two variables that equal character objects
+    //make two variables to hold character objects
     var playerCharacter = Object.create(character);
     var opponentCharacter = Object.create(character);
     
@@ -61,45 +61,60 @@ $(document).ready(function() {
                 opponentSelector++;
             }
         }
+        //if you chose the last opponent, remove the opponent selector area from the screen
         if(opponentsFought < 3){
             $("#picked-opponent-head").text("Choose an opponent!");
         } else {
             $("#picked-opponent-head").empty();
         }
     };
-    
+    //function to add the character you chose to the opponent area
     function rewriteFightingOpponent() {
         $(".chosen-opponent").html(opponentCharacter.characterCard);
         $("#opponent-head").text("Opponent!");
         rewriteOpponentSelector();
     };
-    
+    //attack function
     function attack() {
+        //decrement player and opponent hp with appropriate damage taken
         opponentCharacter.hp -= playerCharacter.attackStat;
         playerCharacter.hp -= opponentCharacter.counterAttackStat;
-        $("#player-damage").text(`You did ${playerCharacter.attackStat} damage!`);
-        $("#opponent-damage").text(`You took ${opponentCharacter.counterAttackStat} damage!`);
+        //add an area to display how much damge each character did
         $("#damage-box").css("border", "solid black 2px");
         $("#damage-box").css("background-color", "white");
+        //update the damage in the damage display area
+        $("#player-damage").text(`You did ${playerCharacter.attackStat} damage!`);
+        $("#opponent-damage").text(`You took ${opponentCharacter.counterAttackStat} damage!`);
+        //update player's attackStat
         playerCharacter.attackStat = playerCharacter.attackStat * 2;
+        //update the hp on the character cards
         $("#" + playerCharacter.name + "-text").text(`${playerCharacter.hp} HP`);
         $("#" + opponentCharacter.name + "-text").text(`${opponentCharacter.hp} HP`);
+        //if the player's health goes to 0 or lower you lose
         if(playerCharacter.hp <= 0) {
             alert("Oh no! You lost!");
             $(".opponent-choice").text("");
+            //change attack button text to reset
             $("#Attack").text("Reset");
+        //if opponent health goes to or below 0 you beat them
         } else if(opponentCharacter.hp <= 0) {
             alert(`You beat ${opponentCharacter.name}!`);
+            //remove the charater card
             $(".chosen-opponent").empty();
             $("#opponent-head").empty();
+            //remove the character from the object
             opponentCharacter.resetCharacter();
+            //if you beat all the characters you win the game
             if(opponentsFought  === 3) {
                 alert("You beat them all! You win!");
                 $(".opponent-choice").text("");
+                //change the attack button text to reset
                 $("#Attack").text("Reset");
+                //change player's health so the reset button will work
                 playerCharacter.hp = 0;
             }
         };
+        //if both players have 0 hp change the attack button text to reset
         if(opponentCharacter.hp <= 0 && playerCharacter.hp <= 0) {
             $(".opponent-choice").text("");
             $("#Attack").text("Reset");
@@ -113,7 +128,7 @@ $(document).ready(function() {
         var chosenName;
         //if the name in the alt attribute matches the first part of the index of the array, that is the player's choice
         //and use the pickMe method to assign the info to the playerCharacter object
-        //then refresh the page
+        //then refresh the info on the page, but only if there isn't already a character chosen
         if(!playerCharacter.name) {
             chosenName = $(this).attr("alt");
             usedNames[opponentsFought] = chosenName;  
@@ -125,7 +140,7 @@ $(document).ready(function() {
             }
         }
     });
-
+    //choose the opponent if there hasn't already been one chosen then update the info on the screen
     $(".opponent-choice").on("click", function() {
         var chosenOpponent;
         if(!opponentCharacter.name) {
@@ -140,9 +155,9 @@ $(document).ready(function() {
             }
         } 
     })
-
+    //attack if possible. if not possible, reload the page to start the game over
     $("#attack-button").on("click", function() {
-        if (playerCharacter.hp > 0){
+        if (playerCharacter.hp > 0 && opponentCharacter.hp > 0){
             attack();
         }
         else if(playerCharacter.hp <= 0 && playerCharacter.name !== "") {
